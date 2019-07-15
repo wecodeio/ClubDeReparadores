@@ -1,0 +1,2 @@
+class Repairer < ApplicationRecord
+end
