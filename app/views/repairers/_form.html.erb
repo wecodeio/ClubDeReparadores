@@ -1,0 +1,17 @@
+<%= form_with(model: repairer, local: true) do |form| %>
+  <% if repairer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repairer.errors.count, "error") %> prohibited this repairer from being saved:</h2>
+
+      <ul>
+      <% repairer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
