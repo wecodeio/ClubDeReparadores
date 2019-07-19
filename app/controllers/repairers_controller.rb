@@ -70,6 +70,6 @@ class RepairersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def repairer_params
-      params.require(:repairer).permit(:first_name, :last_name, :bio, :phone, :address, :city, :mail)
+      params.require(:repairer).permit(:first_name, :last_name, :bio, :phone, :address, :city, :mail, :cellphone)
     end
 end
