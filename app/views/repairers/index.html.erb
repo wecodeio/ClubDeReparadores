@@ -13,6 +13,7 @@
     <% @repairers.each do |repairer| %>
       <tr>
         <td><%= repairer.first_name %></td>
+        <td><%= repairer.city %></td>
         <td><%= link_to 'Show', repairer %></td>
         <td><%= link_to 'Edit', edit_repairer_path(repairer) %></td>
         <td><%= link_to 'Destroy', repairer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
