@@ -29,7 +29,7 @@ class RepairersController < ApplicationController
 
     respond_to do |format|
       if @repairer.save
-        format.html { redirect_to @repairer, notice: 'Repairer was successfully created.' }
+        format.html { redirect_to @repairer, notice: 'El reparador fue exitosamente creado' }
         format.json { render :show, status: :created, location: @repairer }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class RepairersController < ApplicationController
   def update
     respond_to do |format|
       if @repairer.update(repairer_params)
-        format.html { redirect_to @repairer, notice: 'Repairer was successfully updated.' }
+        format.html { redirect_to @repairer, notice: 'Se ha actualizado al reparador' }
         format.json { render :show, status: :ok, location: @repairer }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class RepairersController < ApplicationController
   def destroy
     @repairer.destroy
     respond_to do |format|
-      format.html { redirect_to repairers_url, notice: 'Repairer was successfully destroyed.' }
+      format.html { redirect_to repairers_url, notice: 'Se ha eliminado al reparador' }
       format.json { head :no_content }
     end
   end
