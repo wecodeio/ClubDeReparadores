@@ -1,4 +1,4 @@
-<%= form_for(@repairer) do |f| %>
+<%= form_for([:admin,@repairer]) do |f| %>
   <% if @repairer.errors.any? %>
     <div id="error_explanation">
     <h2><%= pluralize(@repairer.errors.count, "error") %> prohibited this repairer from being saved:</h2>

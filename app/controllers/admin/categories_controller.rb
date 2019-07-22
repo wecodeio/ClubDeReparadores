@@ -29,8 +29,8 @@ class Admin::CategoriesController < Admin::BaseController
   
       respond_to do |format|
         if @category.save
-          format.html { redirect_to @category, notice: 'Se ha creado una nueva categoria' }
-          format.json { render :show, status: :created, location: @category }
+          format.html { redirect_to [:admin,@category], notice: 'Se ha creado una nueva categoria' }
+          format.json { render :show, status: :created, location: [:admin,@category] }
         else
           format.html { render :new }
           format.json { render json: @category.errors, status: :unprocessable_entity }
@@ -43,8 +43,8 @@ class Admin::CategoriesController < Admin::BaseController
     def update
       respond_to do |format|
         if @category.update(category_params)
-          format.html { redirect_to @category, notice: 'Se ha modificado la categoria' }
-          format.json { render :show, status: :ok, location: @category }
+          format.html { redirect_to [:admin,@category] , notice: 'Se ha modificado la categoria' }
+          format.json { render :show, status: :ok, location: [:admin,@category]  }
         else
           format.html { render :edit }
           format.json { render json: @category.errors, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class Admin::CategoriesController < Admin::BaseController
     def destroy
       @category.destroy
       respond_to do |format|
-        format.html { redirect_to categories_url, notice: 'Se ha eliminado la categoria' }
+        format.html { redirect_to admin_categories_url, notice: 'Se ha eliminado la categoria' }
         format.json { head :no_content }
       end
     end

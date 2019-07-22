@@ -29,8 +29,8 @@ class Admin::RepairersController < Admin::BaseController
 
     respond_to do |format|
       if @repairer.save
-        format.html { redirect_to @repairer, notice: 'El reparador fue exitosamente creado' }
-        format.json { render :show, status: :created, location: @repairer }
+        format.html { redirect_to [:admin,@repairer], notice: 'El reparador fue exitosamente creado' }
+        format.json { render :show, status: :created, location: [:admin,@repairer] }
       else
         format.html { render :new }
         format.json { render json: @repairer.errors, status: :unprocessable_entity }
@@ -43,8 +43,8 @@ class Admin::RepairersController < Admin::BaseController
   def update
     respond_to do |format|
       if @repairer.update(repairer_params)
-        format.html { redirect_to @repairer, notice: 'Se ha actualizado al reparador' }
-        format.json { render :show, status: :ok, location: @repairer }
+        format.html { redirect_to [:admin,@repairer], notice: 'Se ha actualizado al reparador' }
+        format.json { render :show, status: :ok, location: [:admin,@repairer] }
       else
         format.html { render :edit }
         format.json { render json: @repairer.errors, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class Admin::RepairersController < Admin::BaseController
   def destroy
     @repairer.destroy
     respond_to do |format|
-      format.html { redirect_to repairers_url, notice: 'Se ha eliminado al reparador' }
+      format.html { redirect_to admin_repairers_url, notice: 'Se ha eliminado al reparador' }
       format.json { head :no_content }
     end
   end
