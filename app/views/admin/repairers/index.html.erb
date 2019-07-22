@@ -15,9 +15,9 @@
       <tr>
         <td><%= repairer.first_name %></td>
         <td><%= repairer.city %></td>
-        <td><%= link_to 'Mostrar', repairer %></td>
-        <td><%= link_to 'Editar', edit_repairer_path(repairer) %></td>
-        <td><%= link_to 'Eliminar', repairer, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+        <td><%= link_to 'Mostrar', admin_repairer %></td>
+        <td><%= link_to 'Editar', edit_admin_repairer_path(repairer) %></td>
+        <td><%= link_to 'Eliminar', admin_repairer, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
