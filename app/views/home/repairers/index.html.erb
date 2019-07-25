@@ -1,0 +1,29 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h1>REPARADORES</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repairers.each do |repairer| %>
+      <tr>
+        <td><%= repairer.first_name %></td>
+        <td><%= repairer.city %></td>
+        <td><%= link_to 'Mostrar', admin_repairer_path(repairer) %></td>
+        <td><%= link_to 'Editar', edit_admin_repairer_path(repairer) %></td>
+        <td><%= link_to 'Eliminar', admin_repairer_path(repairer), method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo reparador', new_admin_repairer_path %>
+</div>

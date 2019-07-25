@@ -1,0 +1,8 @@
+<div class="container-fluid">
+<h1>Editar Reparador: <%=@repairer.first_name %> </h1>
+
+<%= render 'form', repairer: @repairer %>
+
+<%= link_to 'Mostrar', [:admin,@repairer] %> |
+<%= link_to 'Atras', admin_repairers_path %>
+</div>
