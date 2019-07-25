@@ -64,5 +64,4 @@ class Home::CategoriesController < Home::BaseController
       def category_params
         params.require(:category).permit(:name, :description)
       end
-  end
   

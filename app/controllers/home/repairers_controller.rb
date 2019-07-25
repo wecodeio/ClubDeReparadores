@@ -64,4 +64,3 @@ class Home::RepairersController < Home::BaseController
     def repairer_params
       params.require(:repairer).permit(:first_name, :last_name, :bio, :phone, :address, :city, :mail, :cellphone)
     end
-end
