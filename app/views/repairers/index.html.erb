@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+<%= form_tag do |f| %>
+
+<h1>REPARADORES</h1>
+
+<br><br>
+<%= label_tag :city, "Ciudad" %>
+  <%= text_field_tag :city %>
+    <br><br>
+    <%= label_tag :category, "Categoria" %>
+    <%= text_field_tag :category %>
+    <br><br>
+
+    <div class="actions">
+    <input type="submit" name="commit" value="Buscar" data-disable-with="Aceptar">
+    
+    </div>
+  <% end %>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repairers.each do |repairer| %>
+      <tr>
+        <td><%= repairer.first_name %></td>
+        <td><%= repairer.city %></td>
+        <td><%= link_to 'Mostrar', repairer_path(repairer) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+</div>

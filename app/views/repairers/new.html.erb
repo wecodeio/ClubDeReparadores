@@ -1,0 +1,44 @@
+<div class="container-fluid">
+<h1>Nuevo reparador</h1>
+<%= form_for([:new_repairers_path,@repairer]) do |f| %>
+  <% if @repairer.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@repairer.errors.count, "error") %> prohibited this repairer from being saved:</h2>
+  
+    <ul>
+    <% @repairer.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+    <% end %>
+    </ul>
+    </div>
+  <% end %>
+  <%= f.label :Nombre %>
+  <%= f.text_field :first_name %>
+    <br><br>
+    <%= f.label :Apellido %>
+    <%= f.text_field :last_name %>
+    <br><br>
+    <%= f.label :Telefono %>
+    <%= f.text_field :phone %>
+    <br><br>
+    <%= f.label :Direccion %>
+    <%= f.text_field :address %>
+    <br><br>
+    <%= f.label :Ciudad %>
+    <%= f.text_field :city %>
+    <br><br>
+    <%= f.label :Email %>
+    <%= f.text_field :mail %>
+    <br><br>
+    <%= f.label :Biografia %>
+    <%= f.text_area :bio %>
+    <br><br>
+    
+    <div class="actions">
+    <input type="submit" name="commit" value="Aceptar" data-disable-with="Aceptar">
+    
+    </div>
+    <% end %>
+    
+<%= link_to 'Atras', new_repairers_path %>
+</div>
