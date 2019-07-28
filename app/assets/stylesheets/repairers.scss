@@ -4,12 +4,33 @@
 body {
     background-color: coral;
 }
+
 div {
     color: black;
     font-size: 26px;
     line-height: 48px;
-    float: none;
     text-align:center;
     align-content: center;
-    padding: 200px;
+    padding: 150px;
+}
+
+.btn-group {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: justify;
+}
+
+.btn {
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: all 1.5s;
+}
+
+.tr {
+    font-size: 50px;
 }
