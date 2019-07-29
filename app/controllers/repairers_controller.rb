@@ -3,10 +3,12 @@ class RepairersController < ApplicationController
     # GET /repairers
     # GET /repairers.json
     def index
-      @repairers = Repairer.all
+      @categories =  Category.all
     end
     def show
-      @repairer = Repairer.find(params[:id])
+      @category = Repairer.find(params[:id])
     end
-
+    def new
+      @repairer = Repairer.new
+    end
   end
