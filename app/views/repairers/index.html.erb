@@ -5,19 +5,19 @@
 <h1>REPARADORES</h1>
 
 <br>
-<div class="form-row justify-content-md-center">
-<div class="form-group col-md-6">
-<%= label_tag :city, "Ciudad" %>
-  <%= text_field_tag :city, "", class:"form-control" %>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label col-form-label-lg">Ciudad</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control form-control-lg">
+    </div>
   </div>
-  </div>
-  <div class="form-row justify-content-md-center"> 
-   <div class="form-group col-md-4">
-      <%= label_tag :category, "Categoria" %>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label col-form-label-lg">Categoria</label>
+    <div class="col-sm-10">
       <%= select_tag "categories", options_from_collection_for_select(@categories, "id", "name"), class:"form-control" %>
     </div>
-   </div>
-    <div class="actions">
+  </div>
+   <div class="actions">
     <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Buscar</a>
     <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Atras</a>    
      </div>
