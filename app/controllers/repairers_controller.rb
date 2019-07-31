@@ -4,12 +4,16 @@ class RepairersController < ApplicationController
     # GET /repairers.json
     def index
       @categories =  Category.all
+      @repairers = Repairer.all
     end
     def show
       @repairer = Repairer.find(params[:id])
     end
     def new
       @repairer = Repairer.new
+    end
+    def search
+      @repairers = Repairer.all
     end
     def create
       @repairer = Repairer.new(repairer_params)

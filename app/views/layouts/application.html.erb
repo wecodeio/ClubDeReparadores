@@ -17,7 +17,19 @@
   </head>
 
   <body>
- 
+ <div id="user_nav">
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log out", log_out_path %>
+  <% else %>
+    <%= link_to "Sign up", sign_up_path %> or
+    <%= link_to "log in", log_in_path %>
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
   <%= yield %>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

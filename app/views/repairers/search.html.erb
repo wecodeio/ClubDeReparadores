@@ -10,16 +10,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @repairers.each do |repairer| %>
+    <% @repairers.each do |r| %>
       <tr>
-        <td><%= repairer.first_name %></td>
-        <td><%= repairer.last_name %></td>
-        <td><%= repairer.bio %></td>
-        <td><%= repairer.phone %></td>
-        <td><%= repairer.address %></td>
-        <td><%= repairer.city %></td>
-        <td><%= repairer.mail %></td>
-        <td><%= repairer.cellphone %></td>
+        <td><%= r.first_name %></td>
+        <td><%= r.last_name %></td>
+        <td><%= r.bio %></td>
+        <td><%= r.phone %></td>
+        <td><%= r.address %></td>
+        <td><%= r.city %></td>
+        <td><%= r.mail %></td>
+        <td><%= r.cellphone %></td>
       </tr>
     <% end %>
   </tbody>
