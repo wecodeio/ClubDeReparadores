@@ -18,3 +18,25 @@ p {
     padding: 10px;
     padding-block-end: 10px;
 }
+
+div {
+    color: black;
+    font-size: 20px;
+    line-height: 48px;
+    text-align:center;
+    align-content: center;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #ff7f50 !important;
+    border-color: #C8613B !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #ff7f50 !important;
+    border-color: #C8613B !important;
+}
