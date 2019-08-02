@@ -1,13 +1,14 @@
 <div class="container-fluid">
 <p id="notice"><%= notice %></p>
-<p> <%= @repairer.first_name%> </p>
-<p> <%= @repairer.last_name%> </p>
-<p> <%= @repairer.bio%> </p>
-<p> <%= @repairer.phone%> </p>
-<p> <%= @repairer.address%> </p>
-<p> <%= @repairer.city%> </p>
-<p> <%= @repairer.mail%> </p>
-<p> <%= @repairer.cellphone%> </p>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><i class="fas fa-user"></i> <%= @repairer.first_name%> <%= @repairer.last_name%> </li>
+  <li class="list-group-item"><i class="fas fa-edit"></i> <%= @repairer.bio%></li>
+  <li class="list-group-item"><i class="fas fa-phone"> </i> <%= @repairer.phone%> </li>
+  <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> <%= @repairer.address%></li>
+  <li class="list-group-item"><i class="fas fa-city"></i> <%= @repairer.city%> </li>
+  <li class="list-group-item"><i class="fas fa-envelope-open-text"></i> <%= @repairer.mail%> </li>
+  <li class="list-group-item"><i class="fas fa-mobile-alt"></i> <%= @repairer.cellphone%> </li>
+</ul>
 <%= link_to 'Editar', edit_admin_repairer_path(@repairer) %> |
 <%= link_to 'Atras', admin_repairers_path %>
 </div>
