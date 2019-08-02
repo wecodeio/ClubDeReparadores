@@ -18,13 +18,17 @@
   </head>
 
   <body>
+  <div class="row">
+  <div class="col-xs-12 col-md-8 col-xs-12 col-md-8"></div>
+  <div class="col-xs-6 col-md-4 col-xs-6 col-md-4"></div>
+  </div>
  <div id="user_nav">
   <% if current_user %>
     Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", log_out_path %>
+    <%= link_to "Cerrar Sesion", log_out_path %>
   <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %>
+    <%= link_to "Registrarse", sign_up_path %> or
+    <%= link_to "Iniciar Sesion", log_in_path %>
   <% end %>
 </div>
 
