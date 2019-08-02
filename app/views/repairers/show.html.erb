@@ -1,19 +1,13 @@
 <div class="container-fluid">
-<i class="fas fa-user"></i>
-<p> <%= @repairer.first_name%> </p>
-<p> <%= @repairer.last_name%> </p>
-<i class="fas fa-edit"></i>
-<p> <%= @repairer.bio%> </p>
-<i class="fas fa-phone"></i>
-<p> <%= @repairer.phone%> </p>
-<i class="fas fa-map-marker-alt"></i>
-<p> <%= @repairer.address%> </p>
-<i class="fas fa-city"></i>
-<p> <%= @repairer.city%> </p>
-<i class="fas fa-envelope-open-text"></i>
-<p> <%= @repairer.mail%> </p>
-<i class="fas fa-mobile-alt"></i>
-<p> <%= @repairer.cellphone%> </p>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><i class="fas fa-user"></i> <%= @repairer.first_name%> <%= @repairer.last_name%> </li>
+  <li class="list-group-item"><i class="fas fa-edit"></i> <%= @repairer.bio%></li>
+  <li class="list-group-item"><i class="fas fa-phone"> </i> <%= @repairer.phone%> </li>
+  <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> <%= @repairer.address%></li>
+  <li class="list-group-item"><i class="fas fa-city"></i> <%= @repairer.city%> </li>
+  <li class="list-group-item"><i class="fas fa-envelope-open-text"></i> <%= @repairer.mail%> </li>
+  <li class="list-group-item"><i class="fas fa-mobile-alt"></i> <%= @repairer.cellphone%> </li>
+</ul>
 <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>      
 <a href="/repairers/new" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Atras</a>
 
