@@ -3,18 +3,15 @@
 <%= form_tag sessions_path do %>
   <p>
   <i class="fas fa-envelope-open-text"></i>
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], placeholder: 'Email' %>
   </p>
   <p>
   <i class="fas fa-key"></i>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password, nil, placeholder: 'Contraseña'%>
   </p>
 
   <div class="actions">
     <input class="btn btn-primary btn-lg active" type="submit" value="Aceptar">
-    <br>
     <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Atras</a>    
      </div>
 

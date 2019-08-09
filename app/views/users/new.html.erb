@@ -13,23 +13,19 @@
   <% end %>
   <p>
   <i class="fas fa-envelope-open-text"></i>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: 'Email'%>
   </p>
   <p>
   <i class="fas fa-key"></i>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, placeholder: 'Contraseña'%>
   </p>
   <p>
   <i class="fas fa-key"></i>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirme contraseña' %>
   </p>
   
  <div class="actions">
     <input class="btn btn-primary btn-lg active" type="submit" value="Aceptar">
-    <br>
     <a href="/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Atras</a>    
      </div>
 
